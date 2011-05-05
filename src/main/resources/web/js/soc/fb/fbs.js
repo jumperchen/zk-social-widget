@@ -7,12 +7,12 @@
 		if(window.FB)
 			f();
 		else
-			setTimeout(function () { 
+			setTimeout(function () { // TODO: setInterval
 				_afterFBMount(f); 
 			}, 500 );
 	}
 
-soc.fb = {
+soc.fbs = {
 	/**
 	 * 
 	 */
@@ -20,7 +20,12 @@ soc.fb = {
 		_afterFBMount(function () { 
 			FB.XFBML.parse(); 
 		});
+	},
+	
+	attr: function (name, val) {
+		return val ? 'name=' + val + ';' : '';
 	}
+	
 };
 
 })();

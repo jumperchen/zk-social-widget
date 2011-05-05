@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+	
+	<language-name>facebook</language-name>
+	<device-type>ajax</device-type>
+	<namespace>http://www.zkoss.org/2011/facebook</namespace>
+	
+	<!-- Minimal requirement for a language -->
+	<extension>fb</extension><!-- the first extension is the major one -->
+	<renderer-class>org.zkoss.zul.impl.PageRenderer</renderer-class>
+	<label-template>
+		<component-name>label</component-name>
+		<component-attribute>value</component-attribute>
+	</label-template>
+	<macro-template>
+		<macro-class>org.zkoss.zk.ui.HtmlMacroComponent</macro-class>
+	</macro-template>
+	<native-template>
+		<native-class>org.zkoss.zk.ui.HtmlNativeComponent</native-class>
+	</native-template>
+	<component>
+		<component-name>label</component-name>
+		<component-class>org.zkoss.zul.Label</component-class>
+		<widget-class>zul.wgt.Label</widget-class>
+		<text-as>value</text-as>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/label.js</mold-uri>
+		</mold>
+	</component>
+	
+	
+	
+	<!-- Widgets -->
+	<component>
+		<component-name>like</component-name>
+		<component-class>org.zkoss.social.facebook.Facebooklike</component-class>
+		<widget-class>soc.fb.Facebooklike</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/facebooklike.js</mold-uri>
+		</mold>
+		<mold>
+			<mold-name>xfbml</mold-name>
+			<mold-uri>mold/facebooklike-xfbml.js</mold-uri>
+		</mold>
+	</component>
+	
+</language>

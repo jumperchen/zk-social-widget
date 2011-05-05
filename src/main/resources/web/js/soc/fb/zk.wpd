@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="soc.fb" language="facebook">
+	<script src="fbs.js" />
+	<widget name="FacebookWidget" />
+	<widget name="Facebooklike" />
+</package>
