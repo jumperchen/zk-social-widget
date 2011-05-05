@@ -1,0 +1,15 @@
+<language-addon>
+	<addon-name>social-widget</addon-name>
+	<language-name>xul/html</language-name>
+	
+	<component>
+		<component-name>fb-like</component-name>
+		<component-class>org.zkoss.social.Facebooklike</component-class>
+		<widget-class>soc.Facebooklike</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/facebooklike.js</mold-uri>
+		</mold>
+	</component>
+	
+</language-addon>
