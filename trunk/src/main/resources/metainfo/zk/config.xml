@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	
+	<config-name>social-widget</config-name>
+	<depends>zul</depends>
+	<!--  
+	<version>
+		<version-class>org.zkoss.theme.breeze.Version</version-class>
+		<version-uid>5.0.7</version-uid>
+	</version>
+	-->
+	
+	<language-config>
+		<addon-uri>/WEB-INF/facebook-lang.xml</addon-uri>
+	</language-config>
+	
+</config>

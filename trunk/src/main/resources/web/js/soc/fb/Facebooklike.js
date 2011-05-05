@@ -1,7 +1,7 @@
 /**
  * 
  */
-soc.Facebooklike = zk.$extends(zk.Widget, {
+soc.fb.Facebooklike = zk.$extends(soc.fb.FacebookWidget, {
 	_send: false,
 	_layout: 0,
 	
@@ -29,20 +29,9 @@ soc.Facebooklike = zk.$extends(zk.Widget, {
 		// TODO
 		return attr;
 	},
-	//@Override
-	redraw: function (out) {
-		//this._loadFBLib(out);
-		this.$supers("redraw", arguments);
-	},
-	_loadFBLib: function (out) {
-		// TODO: only do one time
-		out.push('<script src="http://connect.facebook.net/');
-		out.push('en_US'); // TODO: locale
-		out.push('/all.js#xfbml=1"></script>');
-	},
 	bind_: function () {
 		this.$supers("bind_", arguments);
-		soc.fb.init();
+		soc.fbs.init();
 		// TODO: onLike
 	},
 	unbind_: function () {
