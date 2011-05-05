@@ -10,8 +10,10 @@
 	</version>
 	-->
 	
+	<!--
 	<language-config>
 		<addon-uri>/WEB-INF/facebook-lang.xml</addon-uri>
 	</language-config>
+	-->
 	
 </config>
