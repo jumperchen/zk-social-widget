@@ -3,6 +3,7 @@
 	
 	<config-name>social-widget</config-name>
 	<depends>zul</depends>
+	
 	<!--  
 	<version>
 		<version-class>org.zkoss.theme.breeze.Version</version-class>
@@ -10,10 +11,8 @@
 	</version>
 	-->
 	
-	<!--
 	<language-config>
-		<addon-uri>/WEB-INF/facebook-lang.xml</addon-uri>
+		<language-uri>/metainfo/zk/lang-facebook.xml</language-uri>
 	</language-config>
-	-->
 	
 </config>
