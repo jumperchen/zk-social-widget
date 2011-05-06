@@ -10,6 +10,6 @@ function (out) {
 	// TODO: use util
 	out.push('<iframe src="http://www.facebook.com/plugins/like.php?', 
 			attr('href', this._href), 
-			' scrolling="no" frameborder="0" allowTransparency="true"', 
+			'" scrolling="no" frameborder="0" allowTransparency="true"', 
 			' style="border:none; overflow:hidden; width:450px; height:80px;"></iframe>');
 }

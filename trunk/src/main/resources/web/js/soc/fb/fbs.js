@@ -23,7 +23,8 @@ soc.fbs = {
 	},
 	
 	attr: function (name, val) {
-		return val ? 'name=' + val + ';' : '';
+		// TODO: escape
+		return val ? name + '=' + encodeURIComponent(val) + '&amp;amp;' : '';
 	}
 	
 };
