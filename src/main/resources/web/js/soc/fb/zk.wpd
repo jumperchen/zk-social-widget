@@ -2,5 +2,5 @@
 <package name="soc.fb" language="facebook">
 	<script src="fbs.js" />
 	<widget name="FacebookWidget" />
-	<widget name="Facebooklike" />
+	<widget name="Like" />
 </package>

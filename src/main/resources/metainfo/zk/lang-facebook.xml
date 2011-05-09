@@ -35,14 +35,14 @@
 	<component>
 		<component-name>like</component-name>
 		<component-class>org.zkoss.social.facebook.Facebooklike</component-class>
-		<widget-class>soc.fb.Facebooklike</widget-class>
+		<widget-class>soc.fb.Like</widget-class>
 		<mold>
 			<mold-name>default</mold-name>
-			<mold-uri>mold/facebooklike.js</mold-uri>
+			<mold-uri>mold/like.js</mold-uri>
 		</mold>
 		<mold>
 			<mold-name>xfbml</mold-name>
-			<mold-uri>mold/facebooklike-xfbml.js</mold-uri>
+			<mold-uri>mold/like-xfbml.js</mold-uri>
 		</mold>
 	</component>
 	
