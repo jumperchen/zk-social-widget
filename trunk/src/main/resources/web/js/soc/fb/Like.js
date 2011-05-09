@@ -1,7 +1,7 @@
 /**
  * 
  */
-soc.fb.Facebooklike = zk.$extends(soc.fb.FacebookWidget, {
+soc.fb.Like = zk.$extends(soc.fb.FacebookWidget, {
 	_send: false,
 	_layout: 0,
 	

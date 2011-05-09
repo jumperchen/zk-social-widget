@@ -13,6 +13,7 @@
 	
 	<language-config>
 		<language-uri>/metainfo/zk/lang-facebook.xml</language-uri>
+		<!-- twitter, plurk -->
 	</language-config>
 	
 </config>
