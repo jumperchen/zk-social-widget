@@ -22,6 +22,7 @@ soc.fbs = {
 		});
 	},
 	
+	// TODO: move to wgtAttr_ in FacebookWidget.js
 	attr: function (name, val) {
 		// TODO: escape
 		return val ? name + '=' + encodeURIComponent(val) + '&amp;amp;' : '';

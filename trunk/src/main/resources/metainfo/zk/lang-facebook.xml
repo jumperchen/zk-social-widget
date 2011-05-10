@@ -34,7 +34,7 @@
 	<!-- Widgets -->
 	<component>
 		<component-name>like</component-name>
-		<component-class>org.zkoss.social.facebook.Facebooklike</component-class>
+		<component-class>org.zkoss.social.facebook.Like</component-class>
 		<widget-class>soc.fb.Like</widget-class>
 		<mold>
 			<mold-name>default</mold-name>
