@@ -12,4 +12,5 @@ soc.fb.FacebookWidget = zk.$extends(zk.Widget, {
 		if(this._mold == 'xfbml');
 			soc.fbs.init(); // TODO: only once
 	}
+	/* TODO: introduce wgtAttr_ */
 });

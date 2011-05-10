@@ -19,14 +19,13 @@ package org.zkoss.social.facebook;
 import java.io.IOException;
 
 import org.zkoss.lang.Objects;
-import org.zkoss.zk.ui.HtmlBasedComponent;
 import org.zkoss.zk.ui.sys.ContentRenderer;
 
 /**
  *
  * @author simonpai
  */
-public class Facebooklike extends HtmlBasedComponent {
+public class Like extends FacebookElement {
 	
 	private static final long serialVersionUID = 2139026200562628024L;
 	
@@ -38,11 +37,8 @@ public class Facebooklike extends HtmlBasedComponent {
 	private boolean _send;
 	private int _layout;
 	private boolean _showFaces;
-	private String _width;
+	//private String _width;
 	private String _action = "like";
-	private String _colorScheme;
-	private String _font;
-	private String _ref;
 	
 	// TODO: onLike event
 	
@@ -88,11 +84,6 @@ public class Facebooklike extends HtmlBasedComponent {
 		render(renderer, "href", _href);
 		if(_send) 
 			render(renderer, "send", _send);
-	}
-	
-	@Override
-	protected boolean isChildable() {
-		return false;
 	}
 	
 	public String getZclass() {
