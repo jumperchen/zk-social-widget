@@ -6,10 +6,8 @@ style="border:none; overflow:hidden; width:450px; height:80px;"
 allowTransparency="true"></iframe> * 
  */
 function (out) {
-	var attr = soc.fbs.attr;
-	// TODO: use util
-	out.push('<iframe src="http://www.facebook.com/plugins/like.php?', 
-			attr('href', this._href), 
-			'" scrolling="no" frameborder="0" allowTransparency="true"', 
+	out.push('<iframe src="http://www.facebook.com/plugins/like.php?');
+	this._wgtAttrs(out, true);
+	out.push('" scrolling="no" frameborder="0" allowTransparency="true"', 
 			' style="border:none; overflow:hidden; width:450px; height:80px;"></iframe>');
 }
