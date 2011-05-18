@@ -5,9 +5,7 @@
  * 
  */
 function (out) {
-	// TODO: use util
-	out.push('<script src="http://connect.facebook.net/');
-	out.push('en_US'); // TODO: locale
-	out.push('/all.js#xfbml=1"></script>');
-	out.push('<fb:like ', this.domAttrs_(), '></fb:like>');
+	// TODO: outer block
+	out.push('<div style="display: inline-block;">', soc.fbs.libtag(), // TODO: locale
+			'<fb:like ', this.domAttrs_(), '></fb:like></div>'); // TODO: separate fbAttrs
 }
