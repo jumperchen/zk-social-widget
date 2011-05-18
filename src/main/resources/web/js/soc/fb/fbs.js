@@ -13,6 +13,16 @@
 	}
 
 soc.fbs = {
+	_js: false,
+	/**
+	 * 
+	 */
+	loadjs: function (out, locale) {
+		if(!this._js) {
+			out.push(this.libtag(locale));
+			this._js = true;
+		}
+	},
 	/**
 	 * 
 	 */
@@ -20,11 +30,6 @@ soc.fbs = {
 		_afterFBMount(function () { 
 			FB.XFBML.parse(); 
 		});
-	},
-	// TODO: move to wgtAttr_ in FacebookWidget.js
-	attr: function (name, val) {
-		// TODO: escape
-		return val ? name + '=' + encodeURIComponent(val) + '&amp;amp;' : '';
 	},
 	/**
 	 * 
@@ -37,6 +42,16 @@ soc.fbs = {
 	 */
 	libsrc: function (locale) {
 		return 'http://connect.facebook.net/' + (locale || 'en_US') + '/all.js#xfbml=1';
+	},
+	
+	
+	
+	_attr: function (out, p, name, val) {
+		if(val)
+			if(p)
+				out.push(name, '=', encodeURIComponent(val), '&amp;amp;');
+			else
+				out.push(' ' + name + '="', val, '"');
 	}
 	
 };

@@ -34,10 +34,10 @@ public class FacebookElement extends HtmlBasedComponent {
 	private String _color = "light";
 	private String _font;
 	private String _ref;
+	private String _locale;
 	
 	/**
 	 * 
-	 * @return
 	 */
 	public String getColorscheme() {
 		return _color;
@@ -56,7 +56,6 @@ public class FacebookElement extends HtmlBasedComponent {
 	
 	/**
 	 * 
-	 * @return
 	 */
 	public String getFont() {
 		return _font;
@@ -75,7 +74,6 @@ public class FacebookElement extends HtmlBasedComponent {
 	
 	/**
 	 * 
-	 * @return
 	 */
 	public String getRef() {
 		return _ref;
@@ -92,6 +90,24 @@ public class FacebookElement extends HtmlBasedComponent {
 		}
 	}
 	
+	/**
+	 * 
+	 */
+	public String getLocale() {
+		return _locale;
+	}
+	
+	/**
+	 * 
+	 * @param locale
+	 */
+	public void setLocale(String locale) {
+		if(!Objects.equals(_locale, locale)) {
+			_locale = locale;
+			smartUpdate("locale", _locale);
+		}
+	}
+	
 	
 	
 	// super //
@@ -105,6 +121,8 @@ public class FacebookElement extends HtmlBasedComponent {
 			render(renderer, "font", _font);
 		if(!Strings.isEmpty(_ref))
 			render(renderer, "ref", _ref);
+		if(!Strings.isEmpty(_locale) && "en_US".equals(_locale))
+			render(renderer, "locale", _locale);
 	}
 	
 	@Override
