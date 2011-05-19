@@ -27,7 +27,8 @@ soc.fbs = {
 	 * 
 	 */
 	init: function () {
-		_afterFBMount(function () { 
+		_afterFBMount(function () {
+			FB.XD.init();
 			FB.XFBML.parse(); 
 		});
 	},
