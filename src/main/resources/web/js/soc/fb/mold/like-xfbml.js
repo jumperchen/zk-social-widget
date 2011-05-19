@@ -2,8 +2,7 @@
  * 
  */
 function (out) {
-	// TODO: check outer div design
-	out.push('<div style="display: inline-block;"><fb:like');
+	out.push('<fb:like');
 	this._wgtAttrs(out);
-	out.push('></fb:like></div>');
+	out.push('></fb:like>');
 }
