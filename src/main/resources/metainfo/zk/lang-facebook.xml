@@ -41,24 +41,18 @@
 			<mold-uri>mold/like.js</mold-uri>
 		</mold>
 		<mold>
-			<mold-name>xfbml</mold-name>
-			<mold-uri>mold/like-xfbml.js</mold-uri>
+			<mold-name>iframe</mold-name>
+			<mold-uri>mold/like-if.js</mold-uri>
 		</mold>
 	</component>
-	<!--  
 	<component>
-		<component-name>comment</component-name>
-		<component-class>org.zkoss.social.facebook.Comment</component-class>
-		<widget-class>soc.fb.Comment</widget-class>
+		<component-name>comments</component-name>
+		<component-class>org.zkoss.social.facebook.Comments</component-class>
+		<widget-class>soc.fb.Comments</widget-class>
 		<mold>
 			<mold-name>default</mold-name>
-			<mold-uri>mold/comment.js</mold-uri>
-		</mold>
-		<mold>
-			<mold-name>xfbml</mold-name>
-			<mold-uri>mold/comment-xfbml.js</mold-uri>
+			<mold-uri>mold/comments.js</mold-uri>
 		</mold>
 	</component>
-	-->
 	
 </language>
