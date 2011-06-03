@@ -20,7 +20,7 @@ package org.zkoss.social.facebook;
  *
  * @author simonpai
  */
-public class Comments extends FacebookElement {
+public class Comments extends TaggingElement {
 	
 	private static final long serialVersionUID = -616899817943777534L;
 	

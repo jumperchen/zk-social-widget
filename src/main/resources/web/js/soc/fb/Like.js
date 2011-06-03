@@ -1,21 +1,19 @@
 /**
  * 
  */
-soc.fb.Like = zk.$extends(soc.fb.FacebookWidget, {
+soc.fb.Like = zk.$extends(soc.fb.TaggingWidget, {
 	_send: false,
 	_layout: 0,
 	
 	$define: {
-		href: _zkf = function () {
+		send: _zkf = function () {
 			this.rerender();
-		},
-		send: _zkf
+		}
 		// TODO
 	},
 	//@Override
 	wgtAttrs_: function (attr) {
 		this.$supers('wgtAttrs_', arguments);
-		attr('href', this._href);
 		attr('send', this._send);
 	},
 	bind_: function () {

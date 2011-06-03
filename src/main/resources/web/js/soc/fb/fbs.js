@@ -27,6 +27,7 @@ soc.fbs = {
 	 * 
 	 */
 	init: function () {
+		// TODO: init only once
 		_afterFBMount(function () {
 			FB.init({
 				// appId: 'YOUR APP ID', // TODO: app id
@@ -39,26 +40,7 @@ soc.fbs = {
 			FB.XFBML.parse();
 			*/ 
 		});
-	},
-	/*
-	libtag: function (locale, defer) {
-		return '<script src="' + this.libsrc(locale) + (defer ? ' defer' : '') + '"></script>';
-	},
-	libsrc: function (locale) {
-		return 'http://connect.facebook.net/' + (locale || 'en_US') + '/all.js#xfbml=1';
-	},
-	*/
-	
-	
-	
-	_attr: function (out, p, name, val) {
-		if(val)
-			if(p)
-				out.push(name, '=', encodeURIComponent(val), '&amp;amp;');
-			else
-				out.push(' ' + name + '="', val, '"');
 	}
-	
 };
 
 // load js here

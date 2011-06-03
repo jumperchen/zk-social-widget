@@ -31,10 +31,9 @@ public class FacebookElement extends HtmlBasedComponent {
 	
 	private static final long serialVersionUID = 9145349786543108135L;
 	
-	private String _color = "light";
-	private String _font;
-	private String _ref;
-	private String _locale;
+	protected String _color = "light";
+	protected String _font;
+	protected String _ref;
 	
 	/**
 	 * 
@@ -90,25 +89,6 @@ public class FacebookElement extends HtmlBasedComponent {
 		}
 	}
 	
-	/**
-	 * 
-	 */
-	public String getLocale() {
-		return _locale;
-	}
-	
-	/**
-	 * 
-	 * @param locale
-	 */
-	public void setLocale(String locale) {
-		// TODO: custom attr / library
-		if(!Objects.equals(_locale, locale)) {
-			_locale = locale;
-			smartUpdate("locale", _locale);
-		}
-	}
-	
 	
 	
 	// super //
@@ -122,8 +102,6 @@ public class FacebookElement extends HtmlBasedComponent {
 			render(renderer, "font", _font);
 		if(!Strings.isEmpty(_ref))
 			render(renderer, "ref", _ref);
-		if(!Strings.isEmpty(_locale) && "en_US".equals(_locale))
-			render(renderer, "locale", _locale);
 	}
 	
 	@Override
