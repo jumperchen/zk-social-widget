@@ -7,7 +7,7 @@
 	<name>Social Widget</name>
 	<description>A collection of social network widgets</description>
 	<properties>
-		<zk.version>5.0.7</zk.version>
+		<zk.version>5.0.7.1</zk.version>
 	</properties>
 	<dependencies>
 		<dependency>
