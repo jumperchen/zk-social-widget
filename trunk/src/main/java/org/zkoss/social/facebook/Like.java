@@ -18,6 +18,9 @@ package org.zkoss.social.facebook;
 
 import java.io.IOException;
 
+import org.zkoss.social.facebook.event.LikeEvent;
+import org.zkoss.zk.ui.event.CheckEvent;
+import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.sys.ContentRenderer;
 
 /**
@@ -37,6 +40,9 @@ public class Like extends TaggingElement {
 	private boolean _showFaces;
 	private String _action = "like";
 	
+	static {
+		addClientEvent(Like.class, "onLike", CE_DUPLICATE_IGNORE | CE_IMPORTANT);
+	}
 	// TODO: onLike event
 	
 	// getter, setter //
@@ -62,6 +68,15 @@ public class Like extends TaggingElement {
 		super.renderProperties(renderer);
 		if(_send) 
 			render(renderer, "send", _send);
+	}
+	
+	@Override
+	public void service(org.zkoss.zk.au.AuRequest request, boolean everError) {
+		if ("onLike".equals(request.getCommand())) {
+			LikeEvent evt = LikeEvent.getEvent(request);
+			Events.postEvent(evt);
+		} else
+			super.service(request, everError);
 	}
 	
 	public String getZclass() {
