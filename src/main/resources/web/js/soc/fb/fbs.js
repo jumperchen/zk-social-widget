@@ -13,13 +13,13 @@
 	}
 
 soc.fbs = {
-	//_js: false,
 	/**
 	 * 
 	 */
 	loadjs: function (locale) {
 		var e = document.createElement('script');
-		e.src = document.location.protocol + '//connect.facebook.net/' + (locale || 'en_US') + '/all.js';
+		e.src = document.location.protocol + '//connect.facebook.net/' + 
+				(locale || 'en_US') + '/all.js';
 		e.async = true;
 		jq.head().appendChild(e);
 	},
@@ -35,10 +35,22 @@ soc.fbs = {
 				cookie : true,
 				xfbml : true
 			});
-			/*
-			FB.XD.init();
-			FB.XFBML.parse();
-			*/ 
+		});
+	},
+	/**
+	 * 
+	 */
+	subscribe: function (name, f) {
+		_afterFBMount(function () {
+			FB.Event.subscribe(name, f);
+		});
+	},
+	/**
+	 * 
+	 */
+	unsubscribe: function (name, f) {
+		_afterFBMount(function () {
+			FB.Event.unsubscribe(name, f);
 		});
 	}
 };
