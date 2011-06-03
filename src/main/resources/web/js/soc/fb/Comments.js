@@ -1,25 +1,17 @@
 /**
  * 
  */
-soc.fb.Comments = zk.$extends(soc.fb.FacebookWidget, {
-	//_send: false,
+soc.fb.Comments = zk.$extends(soc.fb.TaggingWidget, {
 	
 	$define: {
-		/*
-		href: _zkf = function () {
+		numPosts: function () {
 			this.rerender();
-		},
-		send: _zkf
-		*/
-		// TODO
+		}
 	},
 	//@Override
 	wgtAttrs_: function (attr) {
 		this.$supers('wgtAttrs_', arguments);
-		/*
-		attr('href', this._href);
-		attr('send', this._send);
-		*/
+		attr('num_posts', this._numPosts);
 	},
 	bind_: function () {
 		this.$supers("bind_", arguments);
@@ -27,4 +19,5 @@ soc.fb.Comments = zk.$extends(soc.fb.FacebookWidget, {
 	unbind_: function () {
 		this.$supers("unbind_", arguments);
 	}
+	
 });
