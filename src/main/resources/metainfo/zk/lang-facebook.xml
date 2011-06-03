@@ -45,5 +45,20 @@
 			<mold-uri>mold/like-xfbml.js</mold-uri>
 		</mold>
 	</component>
+	<!--  
+	<component>
+		<component-name>comment</component-name>
+		<component-class>org.zkoss.social.facebook.Comment</component-class>
+		<widget-class>soc.fb.Comment</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/comment.js</mold-uri>
+		</mold>
+		<mold>
+			<mold-name>xfbml</mold-name>
+			<mold-uri>mold/comment-xfbml.js</mold-uri>
+		</mold>
+	</component>
+	-->
 	
 </language>

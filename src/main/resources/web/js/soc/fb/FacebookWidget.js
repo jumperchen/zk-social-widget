@@ -11,7 +11,7 @@ soc.fb.FacebookWidget = zk.$extends(zk.Widget, {
 			this.rerender();
 		},
 		font: _zkf,
-		locale: _zkf
+		locale: _zkf // TODO: remove
 	},
 	/**
 	 * 
@@ -19,8 +19,7 @@ soc.fb.FacebookWidget = zk.$extends(zk.Widget, {
 	wgtAttrs_: function (attr) {
 		attr('colorscheme', this._colorscheme);
 		attr('font', this._font);
-		// get width and height for outer div
-		// TODO
+		// TODO: width/height
 	},
 	_wgtAttrs: function (out, p) {
 		this.wgtAttrs_(function (n, v) { 
@@ -29,7 +28,6 @@ soc.fb.FacebookWidget = zk.$extends(zk.Widget, {
 	},
 	//@Override
 	redraw: function (out) {
-		soc.fbs.loadjs(out, this._locale);
 		this.$supers("redraw", arguments);
 	},
 	bind_: function () {
