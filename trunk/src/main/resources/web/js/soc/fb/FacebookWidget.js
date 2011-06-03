@@ -1,17 +1,23 @@
+(function () {
+	
+	function _attr (out, p, name, val) {
+		if(val)
+			if(p)
+				out.push(name, '=', encodeURIComponent(val), '&amp;amp;');
+			else
+				out.push(' ' + name + '="', val, '"');
+	}
+	
 /**
  * 
  */
 soc.fb.FacebookWidget = zk.$extends(zk.Widget, {
-	//_colorscheme: '',
-	//_font,
-	//_locale,
 	
 	$define: {
 		colorscheme: _zkf = function () {
 			this.rerender();
 		},
-		font: _zkf,
-		locale: _zkf // TODO: remove
+		font: _zkf
 	},
 	/**
 	 * 
@@ -23,15 +29,14 @@ soc.fb.FacebookWidget = zk.$extends(zk.Widget, {
 	},
 	_wgtAttrs: function (out, p) {
 		this.wgtAttrs_(function (n, v) { 
-			soc.fbs._attr(out, p, n, v); 
+			_attr(out, p, n, v); 
 		});
 	},
 	//@Override
-	redraw: function (out) {
-		this.$supers("redraw", arguments);
-	},
 	bind_: function () {
 		this.$supers("bind_", arguments);
 		soc.fbs.init();
 	}
 });
+
+})();

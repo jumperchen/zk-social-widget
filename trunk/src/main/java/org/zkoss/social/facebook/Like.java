@@ -18,14 +18,13 @@ package org.zkoss.social.facebook;
 
 import java.io.IOException;
 
-import org.zkoss.lang.Objects;
 import org.zkoss.zk.ui.sys.ContentRenderer;
 
 /**
  *
  * @author simonpai
  */
-public class Like extends FacebookElement {
+public class Like extends TaggingElement {
 	
 	private static final long serialVersionUID = 2139026200562628024L;
 	
@@ -33,34 +32,14 @@ public class Like extends FacebookElement {
 	public static final int BUTTON_COUNT = 1;
 	public static final int BOX_COUNT = 2;
 	
-	private String _href;
 	private boolean _send;
 	private int _layout;
 	private boolean _showFaces;
-	//private String _width;
 	private String _action = "like";
 	
 	// TODO: onLike event
 	
 	// getter, setter //
-	/**
-	 * 
-	 */
-	public String getHref() {
-		return _href;
-	}
-	
-	/**
-	 * 
-	 * @param href
-	 */
-	public void setHref(String href) {
-		if(!Objects.equals(_href, href)) {
-			_href = href;
-			smartUpdate("href", _href);
-		}
-	}
-	
 	/**
 	 * 
 	 */
@@ -81,7 +60,6 @@ public class Like extends FacebookElement {
 	@Override
 	protected void renderProperties(ContentRenderer renderer) throws IOException {
 		super.renderProperties(renderer);
-		render(renderer, "href", _href);
 		if(_send) 
 			render(renderer, "send", _send);
 	}
