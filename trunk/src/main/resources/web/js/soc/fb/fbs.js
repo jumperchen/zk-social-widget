@@ -13,37 +13,41 @@
 	}
 
 soc.fbs = {
-	_js: false,
+	//_js: false,
 	/**
 	 * 
 	 */
-	loadjs: function (out, locale) {
-		if(!this._js) {
-			out.push(this.libtag(locale));
-			this._js = true;
-		}
+	loadjs: function (locale) {
+		var e = document.createElement('script');
+		e.src = document.location.protocol + '//connect.facebook.net/' + (locale || 'en_US') + '/all.js';
+		e.async = true;
+		jq.head().appendChild(e);
 	},
 	/**
 	 * 
 	 */
 	init: function () {
 		_afterFBMount(function () {
+			FB.init({
+				// appId: 'YOUR APP ID', // TODO: app id
+				status : true,
+				cookie : true,
+				xfbml : true
+			});
+			/*
 			FB.XD.init();
-			FB.XFBML.parse(); 
+			FB.XFBML.parse();
+			*/ 
 		});
 	},
-	/**
-	 * 
-	 */
-	libtag: function (locale) {
-		return '<script src="' + this.libsrc(locale) + '"></script>';
+	/*
+	libtag: function (locale, defer) {
+		return '<script src="' + this.libsrc(locale) + (defer ? ' defer' : '') + '"></script>';
 	},
-	/**
-	 * 
-	 */
 	libsrc: function (locale) {
 		return 'http://connect.facebook.net/' + (locale || 'en_US') + '/all.js#xfbml=1';
 	},
+	*/
 	
 	
 	
@@ -56,5 +60,8 @@ soc.fbs = {
 	}
 	
 };
+
+// load js here
+soc.fbs.loadjs(); // TODO: locale
 
 })();

@@ -102,6 +102,7 @@ public class FacebookElement extends HtmlBasedComponent {
 	 * @param locale
 	 */
 	public void setLocale(String locale) {
+		// TODO: custom attr / library
 		if(!Objects.equals(_locale, locale)) {
 			_locale = locale;
 			smartUpdate("locale", _locale);
