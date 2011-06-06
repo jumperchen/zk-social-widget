@@ -1,0 +1,9 @@
+<zk xmlns:fb="facebook">
+	<window apply="org.zkoss.social.demo.FBWidgetController">
+		<vlayout>
+			<fb:like id="like1" href="www.google.com" send="true" mold="iframe" />
+			<fb:like id="like2" href="www.google.com" send="true" />
+			<fb:comments id="comments" href="www.google.com.tw" numPosts="2" />
+		</vlayout>
+	</window>
+</zk>
