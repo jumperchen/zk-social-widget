@@ -1,0 +1,9 @@
+<zk xmlns:fb="facebook">
+	<window>
+		<vlayout>
+			<fb:like id="like1" href="www.google.com" send="true" mold="iframe" visible="false" />
+			<fb:like id="like2" href="www.google.com" send="true" visible="false" />
+			<fb:comments id="comments" href="www.google.com.tw" numPosts="2" visible="false" />
+		</vlayout>
+	</window>
+</zk>
